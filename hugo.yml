@@ -1,0 +1,27 @@
+baseURL: 'https://levn.me/'
+languageCode: 'ru'
+title: 'Персональный сайт Немировского Льва'
+theme: 'hugo-cv-theme'
+
+# Language support
+defaultContentLanguage: ru
+defaultContentLanguageInSubdir: true
+languages:
+  ru:
+    languageCode: ru-RU
+    languageDirection: 'ltr'
+    languageName: 'RU'
+    title: 'Персональный сайт Льва Немировского'
+    weight: 1
+  en:
+    languageName: EN
+    languageDirection: ltr
+    languageCode: en-US
+    title: 'Personal Site of Lev Nemirovskii'
+    weight: 2
+  zh:
+    languageCode: zh-CN
+    languageDirection: ltr
+    languageName: CN
+    title: '个人网站 Lev Nemirovskii'
+    weight: 3

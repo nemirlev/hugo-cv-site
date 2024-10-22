@@ -1,0 +1,3 @@
+[submodule "themes/hugo-cv-theme"]
+	path = themes/hugo-cv-theme
+	url = https://github.com/nemirlev/hugo-cv-theme
