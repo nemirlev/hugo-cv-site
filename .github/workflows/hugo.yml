@@ -59,7 +59,35 @@ jobs:
         with:
           path: ./public
 
-  # Deployment job
+  # Build job for SSH deployment
+  build_ssh:
+    runs-on: ubuntu-latest
+    env:
+      HUGO_VERSION: 0.136.3
+    steps:
+      - name: Install Hugo CLI
+        run: |
+          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
+          && sudo dpkg -i ${{ runner.temp }}/hugo.deb
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - name: Build with Hugo for SSH
+        env:
+          HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
+          HUGO_ENVIRONMENT: production
+        run: |
+          hugo \
+            --minify \
+            --baseURL "https://levn.me/"
+      - name: Upload artifact for SSH
+        uses: actions/upload-artifact@v3
+        with:
+          name: hugo-ssh
+          path: ./public
+
+  # Deployment job for GitHub Pages
   deploy:
     environment:
       name: github-pages
@@ -71,16 +99,25 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 
+  # SSH deployment job with password
   deploy_ssh:
     runs-on: ubuntu-latest
-    needs: build
+    needs: build_ssh
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: hugo-ssh
+          path: ./public
+
       - name: Install sshpass
         run: sudo apt-get install -y sshpass
-      - name: Deploy via SSH
+
+      - name: Deploy via SSH with password
         env:
           SSH_PASSWORD: ${{ secrets.SSH_PASSWORD }}
         run: |
-          rsync -avz -e "sshpass -p '$SSH_PASSWORD' ssh -o StrictHostKeyChecking=no" ./public/ ${{ secrets.SSH_SERVER }}:/home/n/nemirlev/levn.me/public_html
+          sshpass -p "$SSH_PASSWORD" rsync -avz --delete \
+            -e "ssh -o StrictHostKeyChecking=no" \
+            ./public/ \
+            ${{ secrets.SSH_SERVER }}:/home/n/nemirlev/levn.me/public_html/
