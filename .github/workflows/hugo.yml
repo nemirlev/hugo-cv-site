@@ -82,7 +82,7 @@ jobs:
             --minify \
             --baseURL "https://levn.me/"
       - name: Upload artifact for SSH
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: hugo-ssh
           path: ./public
