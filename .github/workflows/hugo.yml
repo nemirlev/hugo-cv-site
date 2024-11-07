@@ -70,3 +70,17 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  deploy_ssh:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install sshpass
+        run: sudo apt-get install -y sshpass
+      - name: Deploy via SSH
+        env:
+          SSH_PASSWORD: ${{ secrets.SSH_PASSWORD }}
+        run: |
+          rsync -avz -e "sshpass -p '$SSH_PASSWORD' ssh -o StrictHostKeyChecking=no" ./public/ ${{ secrets.SSH_SERVER }}:/home/n/nemirlev/levn.me/public_html
