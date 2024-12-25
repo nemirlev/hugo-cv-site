@@ -5,4 +5,6 @@ type: "events"
 role: "演讲者"
 location: "莫斯科"
 description: "主题: \"转型故事：我们如何未能处理 20,000+ RPS 以及我们从中学到的教训\""
+video: "https://youtu.be/YSwJkAcgMmk"
+presentation: "files/presentations/HighLoad_2024_Q4.pdf"
 ---
