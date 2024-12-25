@@ -5,5 +5,5 @@ type: "events"
 role: "Speaker"
 location: "Saint Petersburg"
 description: "Topic: \"API Contract Development and Management\""
-presentation: "files/presentations/api_contract_management_presentation.pdf"
+presentation: "/files/presentations/api_contract_management_presentation.pdf"
 ---

@@ -5,5 +5,5 @@ type: "events"
 role: "Спикер"
 location: "Санкт-Петербург"
 description: "Тема: «Разработка и управление едиными контрактами API»"
-presentation: "files/presentations/api_contract_management_presentation.pdf"
+presentation: "/files/presentations/api_contract_management_presentation.pdf"
 ---

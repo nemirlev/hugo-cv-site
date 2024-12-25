@@ -6,5 +6,5 @@ role: "Спикер"
 location: "Москва"
 description: "Тема: «История трансформации: Как мы не справились с 20 000+ RPS и что из этого вынесли»"
 video: "https://youtu.be/YSwJkAcgMmk"
-presentation: "files/presentations/HighLoad_2024_Q4.pdf"
+presentation: "/files/presentations/HighLoad_2024_Q4.pdf"
 ---

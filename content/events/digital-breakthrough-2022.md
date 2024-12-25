@@ -5,6 +5,6 @@ type: "events"
 role: "Спикер, Ментор"
 location: "Иннополис"
 description: "Тема: «Автоматизация с GoLang vs Ansible»"
-presentation: "files/presentations/CLI_ON_Golang.pdf"
+presentation: "/files/presentations/CLI_ON_Golang.pdf"
 video: "https://youtu.be/Z0B7F8A--Uk?feature=shared"
 ---

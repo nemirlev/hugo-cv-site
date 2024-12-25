@@ -5,5 +5,5 @@ type: "events"
 role: "Спикер"
 location: "Москва"
 description: "Тема: «Документация на фронте»"
-presentation: "files/presentations/1124-PSB-prez-holy-js.pdf"
+presentation: "/files/presentations/1124-PSB-prez-holy-js.pdf"
 ---
