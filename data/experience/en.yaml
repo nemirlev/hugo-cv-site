@@ -1,7 +1,7 @@
 - company: "Promsvyazbank, PJSC"
   positions:
     - title: "Director of Engineering, DevOps"
-      period: "May 2023 — Present"
+      period: "May 2024 — Present"
       responsibilities:
         - "Managing over 140 specialists of various levels, including department heads."
         - "Import substitution of GitLab and Nexus tools to improve CI/CD processes and artifact management."
@@ -10,7 +10,7 @@
         - "Developing and implementing architectural solutions to ensure high performance, security, and scalability of systems."
         - "Implementing a DevOps culture and mentoring teams to improve development efficiency and quality."
     - title: "Director of Engineering, Educational Platform"
-      period: "November 2021 — Present"
+      period: "November 2021 — May 2024"
       responsibilities:
         - "Formed and coordinated the work of a cross-functional team of 60+ specialists, including the management of outstaff resources."
         - "Led the launch of a high-load international educational platform from concept to successful production."
