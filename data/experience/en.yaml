@@ -4,11 +4,11 @@
       period: "May 2023 — Present"
       responsibilities:
         - "Managing over 140 specialists of various levels, including department heads."
-        - "Import substitution and integration of GitLab and Nexus tools to improve CI/CD processes and artifact management."
+        - "Import substitution of GitLab and Nexus tools to improve CI/CD processes and artifact management."
         - "Implementing Kubernetes in the banking infrastructure to increase service scalability and reliability."
         - "Initiating and implementing Infrastructure as Code (IaC) approaches to automate deployment and resource management."
         - "Developing and implementing architectural solutions to ensure high performance, security, and scalability of systems."
-        - "Establishing DevOps cultural practices and mentoring teams to improve development efficiency and quality."
+        - "Implementing a DevOps culture and mentoring teams to improve development efficiency and quality."
     - title: "Director of Engineering, Educational Platform"
       period: "November 2021 — Present"
       responsibilities:
